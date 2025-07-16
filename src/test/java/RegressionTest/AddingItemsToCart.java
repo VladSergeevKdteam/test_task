@@ -23,8 +23,6 @@ public class AddingItemsToCart {
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        options = new ChromeOptions();
-        options.addArguments("--headless=new", "--disable-gpu", "--no-sandbox", "--disable-extensions");
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.manage().deleteAllCookies();
@@ -35,7 +33,7 @@ public class AddingItemsToCart {
 
     }
     @Test
-    public void editUserName()  throws Exception {
+    public void addProductsToCart()  throws Exception {
         try {
             driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
             String firstRequest = "ro";
